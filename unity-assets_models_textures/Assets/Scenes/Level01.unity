@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 837822711}
   - component: {fileID: 837822710}
   m_Layer: 0
-  m_Name: Winflag
+  m_Name: WinFlag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
