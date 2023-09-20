@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -11,14 +12,13 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5.0f;
     public float gravity = -25.0f;
     Vector3 direction;
-
-    CharacterController controller;
+    public CharacterController controller;
+    public Transform player;
 
     // Use this for initialization
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-
+        
     }
 
     void Update()
@@ -32,8 +32,13 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 direction.y = jumpForce;
-                Debug.Log("jump ok");
             }
+        }
+
+        if (player.position.y <= -10.0f)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            player.position = new Vector3(player.position.x, player.position.y * 20.0f, player.position.z);
         }
         direction.y += gravity * Time.deltaTime;
         controller.Move(direction * speed * Time.deltaTime);
