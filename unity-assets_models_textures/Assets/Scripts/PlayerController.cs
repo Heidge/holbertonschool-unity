@@ -6,51 +6,36 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float speed = 15;
+    public float speed = 15f;
 
-    public float gravity = -60f;
-    public float jumpSpeed = 25;
+    public float jumpForce = 5.0f;
+    public float gravity = -25.0f;
+    Vector3 direction;
+
     CharacterController controller;
-    Vector3 moveVelocity;
-    Vector3 turnVelocity;
 
     // Use this for initialization
-    void Awake()
+    void Start()
     {
         controller = GetComponent<CharacterController>();
+
     }
 
     void Update()
     {
-
-        float hInput = Input.GetAxisRaw("Horizontal");
-        float vInput = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(hInput, 0f, vInput);
-
+        float hInput = Input.GetAxis("Horizontal");
+        float vInput = Input.GetAxis("Vertical");
+        
         if (controller.isGrounded)
         {
-            if (Input.GetButtonDown("Jump"))
+            direction = new Vector3(hInput, 0f, vInput);
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                direction.y = jumpSpeed;
+                direction.y = jumpForce;
+                Debug.Log("jump ok");
             }
         }
         direction.y += gravity * Time.deltaTime;
         controller.Move(direction * speed * Time.deltaTime);
-
-        /**
-                if (controller.isGrounded)
-                {
-                    moveVelocity = transform.forward * speed * vInput;
-
-                    if (Input.GetButtonDown("Jump"))
-                    {
-                        moveVelocity.y = jumpSpeed;
-                    }
-                }
-                //Adding gravity
-                moveVelocity.y += gravity * Time.deltaTime;
-
-                controller.Move(moveVelocity * Time.deltaTime);
-*/
     }
 }
