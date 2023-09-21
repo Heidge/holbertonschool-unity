@@ -2978,6 +2978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8425675278105576521, guid: c803c4755dcea1e4a925fa04af4d9e84, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
