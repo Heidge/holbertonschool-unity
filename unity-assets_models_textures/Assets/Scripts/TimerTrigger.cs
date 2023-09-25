@@ -7,7 +7,7 @@ public class TimerTrigger : MonoBehaviour
 	public GameObject player;
 	void Update()
 	{
-		
+
 	}
 
 	void OnTriggerExit(Collider other)
@@ -16,6 +16,6 @@ public class TimerTrigger : MonoBehaviour
 		{
 			player.GetComponent<Timer>().enabled = true;
 		}
-		
+
 	}
 }

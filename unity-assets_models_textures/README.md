@@ -1,4 +1,4 @@
-# Unity - Assets: Models, Textures & TEST
+# Unity - Assets: Models, Textures
 
 ## Learning Objectives
 
