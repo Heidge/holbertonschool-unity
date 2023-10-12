@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -10,20 +11,22 @@ public class CameraController : MonoBehaviour
     public bool lookAtPlayer = false;
     public bool rotateAroundPlayer = true;
     public float rotationSpeed = 2.0f;
+   
 
 
     void Start()
     {
         transform.position = player.position + offset;
-        
-
     }
     void Update()
     {
+        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
         if (rotateAroundPlayer)
         {
-            Quaternion camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotationSpeed, Vector3.up);
+            Quaternion camTurnAngle = Quaternion.AngleAxis(mouseX, Vector3.up);
+            player.Rotate(Vector3.up, mouseX);
             offset = camTurnAngle * offset;
+            
         }
         
         Vector3 newPos = player.position + offset;

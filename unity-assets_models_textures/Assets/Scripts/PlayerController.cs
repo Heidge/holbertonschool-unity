@@ -6,18 +6,16 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-
+    public Transform cam;
     public float speed = 15f;
-    public Transform cible;
     public float jumpForce = 5.0f;
     public float gravity = -25.0f;
     Vector3 direction;
     public CharacterController controller;
 
-    // Use this for initialization
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -33,6 +31,7 @@ public class PlayerController : MonoBehaviour
             if (controller.isGrounded)
             {
                 direction = new Vector3(hInput, 0f, vInput);
+                direction = transform.TransformDirection(direction);
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     direction.y = jumpForce;
@@ -40,9 +39,7 @@ public class PlayerController : MonoBehaviour
             }
             
             direction.y += gravity * Time.deltaTime;
-            
 
-            
             controller.Move(direction * speed * Time.deltaTime);
             
             
