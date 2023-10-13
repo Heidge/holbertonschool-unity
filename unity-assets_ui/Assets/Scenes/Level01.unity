@@ -10871,9 +10871,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2357792407343507021, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430703785453225457, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447818966670752585, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3524521088462082378, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524521088462082378, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4159136397090795407, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
       propertyPath: m_Pivot.x
