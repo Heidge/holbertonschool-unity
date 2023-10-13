@@ -5,17 +5,16 @@ using UnityEngine;
 public class TimerTrigger : MonoBehaviour
 {
 	public GameObject player;
-	void Update()
-	{
-
-	}
+	public GameObject pauseCanvas;
 
 	void OnTriggerExit(Collider other)
 	{
-		if (!other.CompareTag("Timetrigger"))
+		if (!pauseCanvas.activeSelf)
 		{
-			player.GetComponent<Timer>().enabled = true;
-		}
-
+            if (!other.CompareTag("Timetrigger"))
+            {
+                player.GetComponent<Timer>().enabled = true;
+            }
+        }
 	}
 }

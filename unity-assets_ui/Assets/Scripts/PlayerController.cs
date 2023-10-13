@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
         if (transform.position.y <= -10.0f)
         {
             transform.position = new Vector3(0.0f, 1.25f, 0.0f);
