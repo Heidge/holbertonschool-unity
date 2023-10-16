@@ -11296,9 +11296,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1010831401156565972, guid: 9f277cfe37f67d744b9e4d4c428f2d14, type: 3}
+      propertyPath: m_text
+      value: Next
+      objectReference: {fileID: 0}
     - target: {fileID: 4869838335065446463, guid: 9f277cfe37f67d744b9e4d4c428f2d14, type: 3}
       propertyPath: m_Name
       value: WinCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5214239292929832580, guid: 9f277cfe37f67d744b9e4d4c428f2d14, type: 3}
+      propertyPath: m_Name
+      value: NextButton
       objectReference: {fileID: 0}
     - target: {fileID: 6144001664158435664, guid: 9f277cfe37f67d744b9e4d4c428f2d14, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
