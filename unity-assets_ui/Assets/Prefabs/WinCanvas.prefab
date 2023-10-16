@@ -557,7 +557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Resume
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f7246f1444470654d9fe3b38e8e65bc3, type: 2}
   m_sharedMaterial: {fileID: -8813463294237192423, guid: f7246f1444470654d9fe3b38e8e65bc3, type: 2}
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 3691992826691675850}
   - component: {fileID: 6144001664158435664}
   m_Layer: 5
-  m_Name: Next
+  m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
