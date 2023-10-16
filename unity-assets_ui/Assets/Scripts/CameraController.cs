@@ -4,9 +4,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform player;
-    private Transform cam;
     public Vector3 offset;
-
+    public bool isInverted;
     public float smooth = 0.5f;
     public bool lookAtPlayer = false;
     public bool rotateAroundPlayer = true;
@@ -21,21 +20,25 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
+        float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed;
         if (rotateAroundPlayer)
         {
             Quaternion camTurnAngle = Quaternion.AngleAxis(mouseX, Vector3.up);
             player.Rotate(Vector3.up, mouseX);
             offset = camTurnAngle * offset;
-            
         }
         
         Vector3 newPos = player.position + offset;
         transform.position = Vector3.Slerp(transform.position, newPos, smooth);
-        //player.transform.Rotate(0.0f, transform.rotation.y, 0.0f, Space.Self);
 
         if (lookAtPlayer || rotateAroundPlayer)
         {
             transform.LookAt(player);
         }
+    }
+
+    void YInversion()
+    {
+
     }
 }

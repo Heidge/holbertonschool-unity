@@ -7,9 +7,7 @@ public class Timer : MonoBehaviour
 {
     public Text Timer_Text;
     private float tempsActuel = 0f;
-    private bool gamePaused = false;
 
-    // Update is called once per frame
     void Update()
     {
             tempsActuel += Time.deltaTime;
