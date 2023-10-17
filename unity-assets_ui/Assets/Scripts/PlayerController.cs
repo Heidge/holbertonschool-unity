@@ -13,13 +13,6 @@ public class PlayerController : MonoBehaviour
     Vector3 direction;
     public CharacterController controller;
 
-    void Start()
-    {
-        Cursor.visible = false;
-    }
-
-
-
     void Update()
     {
 

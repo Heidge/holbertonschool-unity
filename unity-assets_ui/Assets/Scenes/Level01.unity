@@ -3587,11 +3587,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1831248138}
   offset: {x: 0, y: 2.5, z: -6.25}
-  isInverted: 1
+  isInverted: 0
   smooth: 0.5
   lookAtPlayer: 0
   rotateAroundPlayer: 1
-  rotationSpeed: 2
+  rotationSpeedX: 2
+  rotationSpeedY: 0.5
 --- !u!1001 &761934826
 PrefabInstance:
   m_ObjectHideFlags: 0
