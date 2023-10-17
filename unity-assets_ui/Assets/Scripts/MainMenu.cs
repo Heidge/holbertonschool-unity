@@ -12,13 +12,13 @@ public class MainMenu : MonoBehaviour
         switch (level)
         {
             case 1:
-                SceneManager.LoadScene(1);
-                break;
-            case 2:
                 SceneManager.LoadScene(2);
                 break;
-            case 3:
+            case 2:
                 SceneManager.LoadScene(3);
+                break;
+            case 3:
+                SceneManager.LoadScene(4);
                 break;
         }
     }

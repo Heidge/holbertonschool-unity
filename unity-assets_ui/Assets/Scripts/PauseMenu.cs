@@ -16,6 +16,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Cursor.lockState = CursorLockMode.None;
             if (!pauseActived)
             {
                 Pause();
@@ -28,14 +29,15 @@ public class PauseMenu : MonoBehaviour
     }
     public void Pause()
     {
-        Player.GetComponent<Timer>().enabled = false;
+        Time.timeScale = 0f;
         pauseActived = true;
         pauseCanvas.SetActive(true);
     }
 
     public void Resume()
     {
-        Player.GetComponent<Timer>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
         pauseActived = false;
         pauseCanvas.SetActive(false);
     }
@@ -53,7 +55,7 @@ public class PauseMenu : MonoBehaviour
     public void Options()
     {
         pauseCanvas.SetActive(false);
-        Player.GetComponent<Timer>().enabled = false;
+        Time.timeScale = 0f;
         PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Options");
     }
