@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 22977f97c67c7154eb70f6951afec96e, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -4724,30 +4724,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3524521088462082378, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
   m_PrefabInstance: {fileID: 89516941679803331}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &922899130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922899125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c0c944b92156914d8ece9f09e8193a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &922899131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922899125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c0c944b92156914d8ece9f09e8193a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &930760404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a52269393c84b94eb3c782ebbb50858, type: 3}
@@ -10861,6 +10837,34 @@ PrefabInstance:
       propertyPath: m_SpriteState.m_DisabledSprite
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2447818966670752585, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447818966670752585, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447818966670752585, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1831248155}
+    - target: {fileID: 2447818966670752585, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447818966670752585, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447818966670752585, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447818966670752585, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3524521088462082378, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
@@ -10961,13 +10965,7 @@ PrefabInstance:
     - {fileID: 8487259198902404695, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3524521088462082378, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 922899130}
-    - targetCorrespondingSourceObject: {fileID: 3524521088462082378, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 922899131}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d272ae1c6ab6b6c4bbd44ca7677f6378, type: 3}
 --- !u!1 &3524521090064802416 stripped
 GameObject:
@@ -11219,7 +11217,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: WinMenu, Assembly-CSharp
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6428579749268682738, guid: 9f277cfe37f67d744b9e4d4c428f2d14, type: 3}
+    - {fileID: 7196462762569282689, guid: 9f277cfe37f67d744b9e4d4c428f2d14, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

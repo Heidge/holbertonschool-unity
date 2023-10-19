@@ -12,6 +12,11 @@ public class PauseMenu : MonoBehaviour
     public GameObject Player;
     private bool pauseActived = false;
 
+    void Start()
+    {
+
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -44,18 +49,19 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void Options()
     {
         pauseCanvas.SetActive(false);
-        Time.timeScale = 0f;
         PlayerPrefs.SetString("lastScene", SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Options");
     }

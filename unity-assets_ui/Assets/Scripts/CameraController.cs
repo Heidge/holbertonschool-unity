@@ -1,4 +1,3 @@
-using System.Threading;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -20,15 +19,16 @@ public class CameraController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         transform.position = player.position + offset;
+        isInverted = PlayerPrefs.GetInt("isInverted") == 1;
     }
     void Update()
     {
-
         mouseY = Input.GetAxis("Mouse Y") * rotationSpeedY;
         if (isInverted)
             mouseY *= -1;
+
         mouseX = Input.GetAxis("Mouse X") * rotationSpeedX;
-        
+
         if (rotateAroundPlayer)
         {
             if (mouseX != 0)
@@ -40,27 +40,23 @@ public class CameraController : MonoBehaviour
 
             if (mouseY != 0)
             {
-                
+
                 Quaternion camTurnAngle = Quaternion.AngleAxis(mouseY, transform.right);
                 offset = camTurnAngle * offset;
             }
-            
+
         }
 
 
         Vector3 newPos = player.position + offset;
         transform.position = Vector3.Slerp(transform.position, newPos, smooth);
-        
-        
+
+
 
         if (lookAtPlayer || rotateAroundPlayer)
         {
             transform.LookAt(player);
         }
     }
-
-    void YInversion()
-    {
-
-    }
 }
+
