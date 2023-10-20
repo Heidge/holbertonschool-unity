@@ -4,61 +4,214 @@
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-- An in-depth understanding of Assets in game development and how to import Assets into Unity
-- Advanced comprehension of common Asset types and Unity primitives for prototyping
-- Understanding the principles of singletons and event systems in game development
-- Proficiency in creating prefabs, and utilizing materials and textures
-- Familiarity with skyboxes, and the components and creation of 3D models
-- Understanding the concept of a mesh and creation of UI elements with image components
-- Understanding the functionality, benefits, and drawbacks of Rigidbody and Character Controller
-- Advanced knowledge of Quaternion and Euler Angles
+- General
+- How to import images to use in a user interface
+- What is a canvas?
+- What is the difference between Screenspace, Worldspace, and Localspace?
+- What is a Sprite?
+- How is a Sprite different from a Texture?
+- How to use the Sprite Editor
+- What is 9-slicing?
+- How to create a Slider
+- How to create a Toggle
+- How to swap button images
+- How to use PlayerPrefs and what are they used for?
 
 ## Technical description
 
-This project involves:
+This project focuses on the following key areas:
 
-1. Prototyping a 3D platformer game: You’ll develop a prototype for a 3D platformer game using Unity. The final product will function as per this sample: Platformer - Final.
-2. Building scripts: Without using free or paid assets, you’ll learn how to build scripts that interact with Unity’s existing character controller components.
-3. Asset usage: You will gain hands-on experience with Unity primitives, learn what assets are in game development, how to import them, and understand the common asset types.
-4. Development of 3D Models and Textures: Learn the essential elements of 3D modeling and texturing, alongside understanding how to use materials, textures, and skyboxes in Unity.
-5. Game Physics: Understand the differences between Rigidbody and Character Controller, along with the pros and cons of using each.
-6. Quaternion and Euler Angles: Get familiar with Quaternion and Euler Angles in Unity.
-You are encouraged to test your game frequently and create development builds as you work through the tasks. Also, take your time to complete each task first and then go back to do a polishing pass when you have finished all of the tasks.
+- **Importing Images:** Learn how to import images to use in a user interface.
+- **Canvas Management:** Understand what a canvas is and the difference between Screenspace, Worldspace, and Localspace.
+- **Sprites:** Learn what a sprite is and how it differs from a texture. Learn how to use the Sprite Editor and what 9-slicing is.
+- **Interactive UI Elements:** Learn how to create a Slider and a Toggle, and how to swap button images.
+- **PlayerPrefs:** Understand how to use PlayerPrefs and what they are used for.
 
-## Credits
+Please create a separate Unity project under the holbertonschool-unity repo, naming it unity-assets_ui. Please also include the latest TextMeshPro package (this project was made with 3.0.6) found in Package Manager -> Unity Registry -> TextMeshPro.
 
-Assets : [Farland Skies - Cloudy Crown](https://assetstore.unity.com/packages/2d/textures-materials/sky/farland-skies-cloudy-crown-60004)
+Note: Using free or paid script assets from the Unity Asset Store or elsewhere is prohibited for this project. Focus on creating your own scripts that interact with Unity’s existing character controller components.
 
 ## Unity Tasks
 
-### 0. Primitive player
+### 0. Leveling up
 
-Create a new Scene called Level01. Create a capsule GameObject called Player which will be a placeholder for this project.
+We’ll be adding on to the last project to add a menu and UI (see example ). Duplicate your 0x05-unity-assets_models_textures directory and rename it unity-assets_ui.
 
-- Position: X: 0, Y: 1.25, Z: 0
-- Rotation: X: 0, Y: 0, Z: 0
-- Scale: X: 1, Y: 1, Z: 1
+Create two more Scenes in unity-assets_ui. For each new scene, create a new path of platforms for the Player to navigate through.
 
-Save Player as a Prefab into a folder named Prefabs. Make sure that when you make changes to the Player Prefab, you Apply the changes at the top of the Inspector window.
+- Scene Name: Level02:
+  - Skybox: CloudyCrown_Daybreak
+  - 
+![Scene Level02](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/5/6779afbc3e993c547ca0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231020%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231020T080630Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=54f7409e11eaa1d59f65a3263eb3e173eecbf74560ca0b376a5ee6bed4fb88a6)
 
-### 1. Primitive prototype
+- Scene Name: Level03:
+  - Skybox: CloudyCrown_Midnight
 
-In the Level01 scene, create a layout of floating platforms of different sizes and positions using only Unity Cube GameObjects, . Plan for a start point and an endpoint and create a path so that the Player can jump between them. The cubes will be placeholders for 3D models that we will import later on.
+### 1. Choose your own adventure
 
-- We strongly suggest drawing out your level layout on paper or whiteboard before building it in Unity
-- Create an empty GameObject called Platforms with a position of X:0, Y:0, Z:0 and organize your platform GameObjects inside it
-- The first platform should be positioned underneath the Player
-- Feel free to create multiple paths or dead ends but keep the number of platforms under 30
-- You may find it useful to use a top down or side view with the Scene Gizmo to position your platforms
+The next few tasks will be creating UI elements using imported images to build a menu that allows the player to choose a level.
+
+Download the Google font “Changa” and place in a Changa folder into a new folder called Fonts in the Assets folder (the final path should be Assets/Fonts/Changa/<.ttf files>). All text should use this font, so change TimerText‘s font as well.
+
+Please note you will use TextMeshPro for the text elements in this project. As TextMeshPro Text components use Font Assets you will have to create a Font Asset for each Changa-{Style}.tff file. These should be included under Assets/Fonts/Changa/ and be named according to this format Changa-{Style}.asset. For example: Changa-Regular.asset or Changa-ExtraBold.asset.
+
+Download these images into a folder called UI in the Textures folder. Set their Texture Type to Sprite (2D and UI).
+
+Create a new Scene called MainMenu.
+
+Using this image as a guide, create a new Canvas with the following attributes and child objects:
+
+- Canvas Name: MenuCanvas
+  - Render mode: Screen Space - Overlay
+  - Pixel Perfect: No
+  - UI Scale Mode: Scale With Screen Size
+  - Reference Resolution: X: 1280 Y: 800
+  - Screen Match Mode: Match Width or Height
+  - Match: 1 (Height)
+  - Reference Pixels Per Unit: 100
+
+
+- Image GameObject Name: MenuBG
+  - Image: bg-menu.png
+  - Anchors Min: X: 0 Y: 0
+  - Anchors Max: X: 1 Y: 1
+  - Left: 50
+  - Top: 50
+  - Right: 50
+  - Bottom: 50
+
+
+- Image GameObject Name: Title
+  - Source image: bg-header.png
+  - Child Text GameObject Name: TitleText
+    - Text: LEVEL SELECT
+    - Font: Changa-ExtraBold.ttf
+    - Vertex Color: #ffffff
+    - Font size: 60
+    - Alignment: Center + Middle
+    - Overflow: Overflow
+
+- Level Buttons - You will need to use the Sprite Editor to slice these images. When the mouse is over the button, the button should highlight; when mouse clicks, the button should appear pressed.
+  - Button GameObject Name: Level01
+    - Background image: button-level01.png
+  - Button GameObject Name: Level02
+    - Background image: button-level02.png
+  - Button GameObject Name: Level03
+    - Background image: button-level03.png
+
+- Other Buttons - You will need to use the Sprite Editor to slice these images. When mouse is over the button, the button should highlight; when mouse clicks, the button should appear pressed.
+  - Button GameObject Name: OptionsButton
+    - Width: 200
+    - Height: 70
+    - Background image: bg-button.png
+  Text GameObject: OptionsText
+    - Text: Options
+    - Font: Changa-Medium.ttf
+    - Vertex Color: #ffffff
+    - Font size: 36
+    - Alignment: Center + Middle
+    - Overflow: Overflow
+    - Transition: Sprite Swap
+    - Highlighted Sprite: bg-button_1
+    - Pressed Sprite: bg-button_2
+    - Save this button into a folder called Prefabs in the Assets folder
+  - Button GameObject Name: ExitButton
+    - Width: 200
+    - Height: 70
+    - Background image: bg-button.png
+    - Text GameObject: ExitText
+    - Text: Exit
+    - Font: Changa-Medium.ttf
+    - Vertex Color: #ffffff
+    - Font size: 36
+    - Alignment: Center + Middle
+    - Overflow: Overflow
+    - Transition: Sprite Swap
+    - Highlighted Sprite: bg-button_1
+    - Pressed Sprite: bg-button_2
+    - Save this button into a folder called Prefabs in the Assets folder
 
 ### 2. Pole position
 
-At the end point of the platforms, create a placeholder cylinder GameObject called WinFlag to designate the end of the path. Do not make WinFlag a child of any object. Later we will add scripting for when the Player reaches the WinFlag.
+Create a new Scene called Options.
 
-- Capsule Collider:
-  - isTrigger: Yes
-  - Radius: 0.7
-  - Height: 6
+Using this image as a guide, create a new Canvas with the following objects:
+
+Canvas Name: OptionsCanvas
+Render mode: Screen Space - Overlay
+Pixel Perfect: No
+UI Scale Mode: Scale With Screen Size
+Reference Resolution: X: 1280 Y: 800
+Screen Match Mode: Match Width or Height
+Match: 1 (Height)
+
+Image GameObject Name: MenuBG
+Image: bg-menu.png
+Anchors Min: X: 0 Y: 0
+Anchors Max: X: 1 Y: 1
+Left: 50
+Top: 50
+Right: 50
+Bottom: 50
+
+Image GameObject Name: Title
+Source image: bg-header.png
+Child Text GameObject Name: TitleText
+Text: OPTIONS
+Font: Changa-ExtraBold.ttf
+Vertex Color: #ffffff
+Font size: 60
+Alignment: Center + Middle
+Overflow: Overflow
+
+Slider GameObject Name: BGMSlider
+Child Text GameObject Name: BGMText
+Text: BGM
+Font: Changa-Medium.ttf
+Vertex Color: #ffffff
+Font size: 36
+Handle image: slider-handle.png
+Image Name: Mute
+Image Source: sound-mute.png
+Image Name: Full
+Image Source: sound-full.png
+
+Slider GameObject Name: SFXSlider
+Text GameObject Name: SFXText
+Text: SFX
+Font: Changa-Medium.ttf
+Vertex Color: #ffffff
+Font size: 36
+Handle image: slider-handle.png
+Image Name: Mute
+Image Source: sound-mute.png
+Image Name: Full
+Image Source: sound-full.png
+Toggle GameObject Name: InvertYToggle
+Child Text GameObject Name: InvertYToggleText
+Text: Invert Y-Axis
+Font: Changa-Medium.ttf
+Vertex Color: #ffffff
+Font size: 36
+Background image: bg-toggle.png
+Checkmark: check-toggle.png
+Buttons
+Button GameObject Name: BackButton
+Background image: bg-button.png
+Child Text GameObject Name: BackText
+Text: Back
+Font: Changa-Medium.ttf
+Vertex Color: #ffffff
+Font size: 36
+Save this button into a folder called Prefabs in the Assets folder
+Button GameObject Name: ApplyButton
+Background image: bg-button.png
+Child Text GameObject Name: ApplyText
+Text: Apply
+Font: Changa-Medium.ttf
+Vertex Color: #ffffff
+Font size: 36
+Save this button into a folder called Prefabs in the Assets folder
 
 ### 3. Jump man
 
