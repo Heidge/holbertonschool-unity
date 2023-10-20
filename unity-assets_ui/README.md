@@ -42,7 +42,7 @@ Create two more Scenes in unity-assets_ui. For each new scene, create a new path
 - Scene Name: Level02:
   - Skybox: CloudyCrown_Daybreak
   - 
-![Scene Level02](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/5/6779afbc3e993c547ca0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231020%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231020T080630Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=54f7409e11eaa1d59f65a3263eb3e173eecbf74560ca0b376a5ee6bed4fb88a6)
+![Scene Level02](C:\Users\axelg\OneDrive\Documents\Dev\Holberton\readmes\01.png)
 
 - Scene Name: Level03:
   - Skybox: CloudyCrown_Midnight
