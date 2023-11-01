@@ -8565,7 +8565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1700961347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10421,6 +10421,7 @@ GameObject:
   - component: {fileID: 2068819658}
   - component: {fileID: 2068819657}
   - component: {fileID: 2068819656}
+  - component: {fileID: 2068819660}
   m_Layer: 0
   m_Name: CutsceneCamera
   m_TagString: Untagged
@@ -10523,6 +10524,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -12, y: 0, z: 0}
+--- !u!114 &2068819660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068819655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867159f5ed0264d439a6f237d028835a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2072259314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ae28d131686142b95267e37e7ce73, type: 3}
@@ -11112,7 +11125,7 @@ PrefabInstance:
       objectReference: {fileID: 760659587}
     - target: {fileID: 1150649519297373333, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1254411706894460364, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_Name
