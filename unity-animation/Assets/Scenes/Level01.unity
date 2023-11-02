@@ -7123,7 +7123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.41
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11123,14 +11123,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 708237151729070065, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1150649519297373333, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 760659587}
-    - target: {fileID: 1150649519297373333, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1254411706894460364, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -11145,7 +11145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4645539454992510118, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.59
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 4645539454992510118, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11180,10 +11180,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5478067584501030346, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 1831248134}
-    - target: {fileID: 5478067584501030346, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: FinalTime
       value: 
       objectReference: {fileID: 714891447}
@@ -11191,17 +11187,9 @@ PrefabInstance:
       propertyPath: Timer_Text
       value: 
       objectReference: {fileID: 1610370317}
-    - target: {fileID: 6942622569732313196, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8505734892063624659, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8505734892063624659, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
+    - target: {fileID: 5869348323496536606, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
