@@ -2386,6 +2386,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa07c0a7a3dfd9a4b9002ebd6fe71b6f, type: 3}
+--- !u!1 &528655285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 189143777665611083, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
+  m_PrefabInstance: {fileID: 4168353102940406461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &532074595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11131,6 +11136,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 760659587}
+    - target: {fileID: 1150649519297373333, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
+      propertyPath: childcontroller
+      value: 
+      objectReference: {fileID: 528655285}
     - target: {fileID: 1254411706894460364, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_Name
       value: Player

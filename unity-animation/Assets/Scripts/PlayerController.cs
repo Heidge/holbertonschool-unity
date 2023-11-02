@@ -12,7 +12,13 @@ public class PlayerController : MonoBehaviour
     public float gravity = -25.0f;
     Vector3 direction;
     public CharacterController controller;
+    public GameObject childcontroller;
+    private Animator animator;
 
+    void Start()
+    {
+        animator = childcontroller.GetComponent<Animator>();
+    }
     void Update()
     {
 
@@ -26,21 +32,25 @@ public class PlayerController : MonoBehaviour
             float vInput = Input.GetAxisRaw("Vertical");
             if (controller.isGrounded)
             {
+                
                 direction = new Vector3(hInput, 0f, vInput);
                 direction = transform.TransformDirection(direction);
+                
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    animator.SetBool("IsRunning", false);
                     direction.y = jumpForce;
                 }
+                
             }
             
             direction.y += gravity * Time.deltaTime;
 
-
-            
+            animator.SetBool("IsRunning", hInput != 0 || vInput != 0);
             controller.Move(direction * speed * Time.deltaTime);
             
-            
+
+
 
         }
     }
