@@ -10536,6 +10536,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 867159f5ed0264d439a6f237d028835a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Camera: {fileID: 760659584}
+  Player: {fileID: 1831248134}
+  TimerCanvas: {fileID: 1700961346}
+  CutsceneCamera: {fileID: 2068819655}
 --- !u!4 &2072259314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ae28d131686142b95267e37e7ce73, type: 3}
@@ -11131,10 +11135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1254411706894460364, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 2120737044681774383, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: pauseCanvas
       value: 
@@ -11145,7 +11145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4645539454992510118, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 4645539454992510118, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11191,13 +11191,17 @@ PrefabInstance:
       propertyPath: Timer_Text
       value: 
       objectReference: {fileID: 1610370317}
+    - target: {fileID: 6942622569732313196, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8505734892063624659, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
-      propertyPath: m_Direction
-      value: 2
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8505734892063624659, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
