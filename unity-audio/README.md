@@ -1,118 +1,148 @@
-# Unity - Audio
+# Unity - Animation
 
 ## Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-- What is an Audio Source
-- What is an Audio Listener
-- What is an Audio Filter
-- What is an Audio Mixer
-- What are snapshots
-- What is a channel
-- What is attenuation
-- What is ducking
-- How to control audio elements with scripts
+### General
+
+- What is a keyframe?
+- How is 2D Animation different from 3D animation?
+- What are Dopesheets and how do you use them?
+- What are Curves and how do you use them?
+- How to import and use Animation Clips?
+- What are Animator Controllers and how do you use them?
+- What is a State Machine?
+- What is a Sub-State Machine?
+- What is Root Motion?
+- How does animation enhance the player’s gaming experience?
+- How to create and control a variety of animations in Unity?
+
+## Technical description
+
+This project focuses on the following key areas:
+
+- **Understanding Animation:** Learn the difference between 2D and 3D animation, and understand the parts of a 3D model and how they are animated.
+- **Unity Animation System:** Get to know Unity’s animation system, including Animation Clips and Animator Controllers.
+- **Animation Implementation:** Learn how to import and use Animation Clips, and how to control them with scripts.
+- **State Machines:** Understand the concept of a State Machine and a Sub-State Machine, and how they are used in animation control.
+- **Root Motion:** Learn about Root Motion and how it can be used to create more realistic movement in your animations.
+
+Please create a separate Unity project under the holbertonschool-unity repo, naming it unity-animation.
+
+You are expected to iterate upon your codebase from the previous UI project. If you do not have a workable version, you can use this Starter Codebase as the base for this project.
+
+Note: Using free or paid script assets from the Unity Asset Store or elsewhere is prohibited for this project. Focus on creating your own scripts that interact with Unity’s character controller components.
 
 ## Unity Tasks
 
-### 0. Sound check, one two
+### 0. Cinematic universe
 
-Duplicate 0x07-unity-animation and rename it unity-audio.
+We’re continuing to add on to the Platformer project to add animation (see example). Duplicate your 0x06-unity-assets_ui directory from the previous project and rename it unity-animation.
 
-Download this .zip file. It contains all the audio clips we’ll be using for this project (see example). Place them in a folder in the Assets folder called Audio. Don’t change the folder hierarchy inside the Audio folder.
+In Level01 scene, disable Main Camera by clicking on the checkbox next to its name in the Inspector. Create a new Camera GameObject named CutsceneCamera. The camera should be facing the end flag.
 
-In your README.md, add the following attribution for the audio clips we’ll be using:
+Open the Animation tab (CTRL + 6), and with CutsceneCamera selected, click on the Create button inside the Animation tab. Save the new Animation with the name Intro01. Create two new folders Animations and Animators. Put Intro01 into the Animations folder and CutsceneCamera into the Animators folder.
 
-Kenney: https://kenney.nl/
-Oculus Audio Pack: https://developer.oculus.com/downloads/package/oculus-audio-pack-1/
-Mindful Audio: https://mindful-audio.com/
-“Wallpaper”, “Cheery Monday” Kevin MacLeod (incompetech.com)
-Licensed under Creative Commons: By Attribution 3.0
-http://creativecommons.org/licenses/by/3.0/
-In the MainMenu scene, create an empty GameObject named MenuSFX. Make button-rollover.ogg a child object of MenuSFX.
+### 1. Keyframes
 
-Add the button-rollover sound clip to all menu buttons (all three level select buttons, Options, Exit) so that when the player’s mouse hovers over a button, it plays the sound clip.
+With Intro01 open in the Animation tab, use keyframes to animate the CutsceneCamera‘s Position and Rotation so that the camera pulls back from the flag, panning over the length of the platforms, and stopping behind the player, ending in the position and rotation of the Main Camera.
 
-### 1. Click
+- CutsceneCamera End Position: x: 0, y: 2.5, z: -6.25
+- CutsceneCamera End Rotation: x: 9, y: 0, z: 0
 
-In the MainMenu scene, make button-click.ogg a child object of MenuSFX.
+The camera’s position and rotation can be of any value during the animation as well as start with a close up shot of the flag and stop at the given values in this task so that the transition of the view from CutsceneCamera to Main Camera in the next task will be seamless. The animation should not loop.
 
-Add the button-click sound clip to all menu buttons (all three level select buttons, Options, Exit) so that when the player’s mouse clicks on a button, it plays the sound clip.
+### 2. Transitions
 
-Save MenuSFX as a prefab inside the Prefabs folder.
+Open the CutsceneCamera Animator in the Animator tab. Make sure that Entry has a transition to Intro.
 
-The OptionsButton and ExitButton prefabs should be updated with the sound effect clips
+Disable PlayerController script in the Player GameObject and disable the TimerCanvas. Create a script called CutsceneController.cs and attach it to the CutsceneCamera GameObject. This script should do the following when the Level01 animation is finished playing:
 
-### 2. Pole position
+- Enable Main Camera
+- Enable PlayerController
+- Enable TimerCanvas
+- Disable CutsceneController
 
-In the MainMenu scene, add Wallpaper as background music. It should start playing when the scene loads and stop when the player loads a different scene. The music should also loop.
+When you press Play on the Level01 scene, the Intro01 animation should play. The Player should not be able to move during the animation. When the camera stops behind the Player, the Timer should become visible but not start. When the Player moves, the Timer should start and the Main Camera should follow the Player. From this point, gameplay should continue as developed in the previous projects.
 
-Inside the Audio folder, create an AudioMixer named MasterMixer. Inside MasterMixer, create a new Audio Mixer Group called BGM. Set the music’s Audio Mixer Group to BGM. By default, BGM audio levels should be at 0.00dB.
+### 3. Sorry Sylvain, it's not a Tic Tac anymore
 
-### 3. Tap-tap-tap
+Download this character model and import it into your Models folder. You may need to remap the materials and textures associated with the model. If you cannot find the materials and/or textures, extract them from the model’s Materials tab in the Inspector.
 
-In the Level01 scene, add footstep sound clips to the Player so that when the Player is running, the sound plays in a loop until the Player stops running.
+In the Hierarchy window, disable Player‘s Mesh Renderer and make the model ty.fbx a child of the Player GameObject. Press Play to test it. The model should be in T-pose and move exactly the same as the Capsule placeholder object did, while in T-pose.
 
-- When the Player runs on a grassy platform, footsteps_running_grass should play
-- When the Player runs on a stone platform, footsteps_running_rock should play
-- If you’ve used both types of platforms in your levels, find a way to trigger different sounds on different surfaces.
-- The footstep sounds should line up with the animation of the Player’s feet touching the ground
-- The footstep sounds should not play while the Player is jumping or falling
+Make sure the ty.fbx model has these properties in the Inspector:
 
-Create a new Audio Mixer Group named Running in MasterMixer and set the footsteps sound clips’ Audio Mixer Group to Running. By default this group’s audio level should be -20.00dB. Add filters to the group to make the sound fit the movement / terrain better.
+- Rig
+    - Animation Type: Humanoid
+    - Avatar Definition: Create From This Model
 
-### 4. Thump
+If you have not already saved Player as a prefab, do so now and put it in the Prefabs folder.
 
-In the Level01 scene, add a landing sound clip to play when the player hits the ground from falling off the platforms and restarting. If the player lands on a grassy platform, footsteps_landing_grass should play. If the player lands on a stone platform, footsteps_landing_rock should play.
+### 4. Running in circles
 
-Create a new Audio Mixer Group named Landing in MasterMixer and set the sound clip’s Audio Mixer Group to Landing. By default this group’s audio level should be 2.00dB. Add filters to the group to make the fall sound more substantial.
+Edit CameraController.cs so that the camera still follows the player, but when the player turns, it does not change the orientation of the camera. The only rotation the camera should do is when the player moves the camera with the mouse.
 
+### 5. Happily idling
 
-### 5. Cheery Monday
+All of the animations we’ll be using in this project are from Mixamo.
 
-In the Level01 scene, add CheeryMonday as background music. It should start playing when the level loads and stop when the player touches the WinFlag or returns to the MainMenu scene. The player sound effects should still play while the BGM plays and it should loop.
+Download this Animation Clip and import it into your Animations folder. Assign the following settings in the Inspector:
 
-Set the music’s Audio Mixer Group to BGM.
+- Rig
+  - Animation Type: Humanoid
+  - Avatar Definition: Create From This Model
+  - 
+In the Animators folder, create a new Animator named ty.controller. Drag the Happy Idle animation into the Animator tab and create a transition from the Entry state to the Happy Idle state.
 
-### 6. Victory fanfare
+The Happy Idle animation should loop continuously while the player isn’t moving. Attach the Animator to the ty model inside the Player prefab.
 
-In the Level01 scene, add VictoryPiano as a win sting that plays once when the Player touches the WinFlag. The background music CheeryMonday should stop playing when VictoryPiano starts.
+### 6. Run boy run
 
-Set the Win music’s Audio Mixer Group to BGM.
+Download this Animation Clip and import it into your Animations folder. Change the settings so that they match Happy Idle‘s settings.
 
-### 7. Ambience
+Drag the Running animation into the ty Animator and create transitions to and from the Happy Idle state. Name the transitions IdleToRunning and RunningToIdle accordingly.
 
-Add ambient audio to at least one tree (birds) or at least one rock/grass/flower (crickets). This audio should be quiet or muted from a distance and grow louder as the player gets closer to the GameObject.
+The Running animation should start immediately (i.e. the Running animation shouldn’t wait until the Happy Idle animation is finished to start). When the player stops running, the Running animation should stop and the Happy Idle animation should start again.
 
-Create a new Audio Mixer Group named Ambience in MasterMixer and set birds and crickets Audio Mixer Group to Ambience. By default, Ambience‘s audio level should be 5.00dB.
+### 7. Jump, jump
 
-### 8. Shhh
+Download this Animation Clip and import it into your Animations folder. Change the settings so it matches Happy Idle and Running‘s settings.
 
-Using Snapshots, create functionality so that when the Player pauses the game, the BGM should become muffled. (Check the playable demo to hear the desired effect.) When the player returns to the game, the sound should return to its original settings.
+Drag the Jump animation into the ty Animator and create transitions to and from the Happy Idle state as well as the Running state. Name the transitions IdleToJump, JumpToIdle, JumpToRunning, and RunningToJump accordingly.
 
-### 9. Volume control #0
+If the player is standing still, the Jump animation should start immediately (i.e. the Jump animation shouldn’t wait until the Happy Idle animation is finished to start). When the player lands, the Jump animation should stop and the Idle animation should start again. The Jump animation should play only once and not loop.
 
-In the Options scene, make sure the OptionsButton and ExitButton prefabs are updated to have the button-rollover and button-click sound effect events applied.
+If the player is running, the Jump animation should start immediately (i.e. the Jump animation shouldn’t wait until the Running animation is finished to start). When the player lands, the Jump animation should stop and if the player is still moving forward, the Running animation should start again. If the player is no longer moving forward, the Idle animation should start again.
 
-In OptionsMenu.cs, script the BGMSlider so that when the slider’s value is changed by dragging the slider handle, the BGM audio decreases and increases from fully muted to max volume. These values should persist through all levels and when the game is quit and re-opened.
+### 8. Free falling
 
-Hint: Converting dB to float
+Create a new Sub-state Machine called FallingDown. Create transitions to it from Running and Jump named RunningToFalling and JumpToFalling.
 
-### 10. Volume control #1
+Download this Animation Clip and import it into your Animations folder.
 
-In the Options scene and OptionsMenu.cs, script the SFXSlider so that when the slider’s value is changed by dragging the slider handle, the SFX audio decreases and increases from fully muted to max volume. These values should persist through all levels and when the game is quit and re-opened. SFX audio includes the ambient sounds and UI button sounds.
+Add a new State called Falling inside the FallingDown Sub-state Machine. When the player is falling from a platform, whether they run off or jump off, the Falling animation should play until the player lands on the starting position again.
 
-Hint: Converting dB to float
+### 9. Splat
 
-### 11. Sound system gonna bring me back up
+Download this Animation Clip and import it into your Animations folder.
 
-Add music and sound effects to scenes Level02 and Level03, using the same Audio Mixer you created for Level01. Make sure your player sounds, options, etc. work in these scenes as well.
+Add a new State called Falling Flat Impact. Create a transition from Falling to Falling Flat Impact called FallingToImpact. This animation should play when the player lands on the starting position after falling. This animation should play once and not repeat.
 
-- Level02 BGM: PorchSwingDays
-- Level03 BGM: BrittleRille
+### 10. Down but not out
 
-### 12. We're done!
+Download this Animation Clip and import it into your Animations folder.
+
+Add a new State called Getting Up. Create a transition from Falling Flat Impact to Getting Up named ImpactToGettingUp. Create a transition from the FallingDown sub-state to Idle named GettingUpToIdle. This animation should play after the Falling Flat Impact animation finishes. This animation should play once and not repeat.
+
+### 11. Animated features
+
+Update the Level02 and Level03 scenes to have their own intro animations named Intro02 and Intro03 respectively. Replace the placeholder player with the animated model in each scene as well.
+
+Some of the animations may not transition well or may clip through the floor or have other visual issues. Change the animations’ settings in the Inspector accordingly to adjust. (Hint) You should also edit the transition times or animation length times to create smooth animations and a good player experience.
+
+### 12. Not quite done yet
 
 Scenes in Build:
 
