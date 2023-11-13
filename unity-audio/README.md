@@ -178,3 +178,12 @@ Create a .zip of each build:
 - Platformer_Windows_x86_64.zip
 
 Upload the three .zip files to Google Drive or Dropbox. Add the links to the files below.
+
+## Special thanks to Kenney for assets
+
+Kenney: https://kenney.nl/
+Oculus Audio Pack: https://developer.oculus.com/downloads/package/oculus-audio-pack-1/
+Mindful Audio: https://mindful-audio.com/
+“Wallpaper”, “Cheery Monday” Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
