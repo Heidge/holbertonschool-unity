@@ -1,428 +1,118 @@
-# Unity - Assets: Models, Textures
+# Unity - Audio
 
 ## Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-- General
-- How to import images to use in a user interface
-- What is a canvas?
-- What is the difference between Screenspace, Worldspace, and Localspace?
-- What is a Sprite?
-- How is a Sprite different from a Texture?
-- How to use the Sprite Editor
-- What is 9-slicing?
-- How to create a Slider
-- How to create a Toggle
-- How to swap button images
-- How to use PlayerPrefs and what are they used for?
-
-## Technical description
-
-This project focuses on the following key areas:
-
-- **Importing Images:** Learn how to import images to use in a user interface.
-- **Canvas Management:** Understand what a canvas is and the difference between Screenspace, Worldspace, and Localspace.
-- **Sprites:** Learn what a sprite is and how it differs from a texture. Learn how to use the Sprite Editor and what 9-slicing is.
-- **Interactive UI Elements:** Learn how to create a Slider and a Toggle, and how to swap button images.
-- **PlayerPrefs:** Understand how to use PlayerPrefs and what they are used for.
-
-Please create a separate Unity project under the holbertonschool-unity repo, naming it unity-assets_ui. Please also include the latest TextMeshPro package (this project was made with 3.0.6) found in Package Manager -> Unity Registry -> TextMeshPro.
-
-Note: Using free or paid script assets from the Unity Asset Store or elsewhere is prohibited for this project. Focus on creating your own scripts that interact with Unity’s existing character controller components.
+- What is an Audio Source
+- What is an Audio Listener
+- What is an Audio Filter
+- What is an Audio Mixer
+- What are snapshots
+- What is a channel
+- What is attenuation
+- What is ducking
+- How to control audio elements with scripts
 
 ## Unity Tasks
 
-### 0. Leveling up
+### 0. Sound check, one two
 
-We’ll be adding on to the last project to add a menu and UI (see example ). Duplicate your 0x05-unity-assets_models_textures directory and rename it unity-assets_ui.
+Duplicate 0x07-unity-animation and rename it unity-audio.
 
-Create two more Scenes in unity-assets_ui. For each new scene, create a new path of platforms for the Player to navigate through.
+Download this .zip file. It contains all the audio clips we’ll be using for this project (see example). Place them in a folder in the Assets folder called Audio. Don’t change the folder hierarchy inside the Audio folder.
 
-- Scene Name: Level02:
-  - Skybox: CloudyCrown_Daybreak
+In your README.md, add the following attribution for the audio clips we’ll be using:
 
-- Scene Name: Level03:
-  - Skybox: CloudyCrown_Midnight
+Kenney: https://kenney.nl/
+Oculus Audio Pack: https://developer.oculus.com/downloads/package/oculus-audio-pack-1/
+Mindful Audio: https://mindful-audio.com/
+“Wallpaper”, “Cheery Monday” Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/
+In the MainMenu scene, create an empty GameObject named MenuSFX. Make button-rollover.ogg a child object of MenuSFX.
 
-### 1. Choose your own adventure
+Add the button-rollover sound clip to all menu buttons (all three level select buttons, Options, Exit) so that when the player’s mouse hovers over a button, it plays the sound clip.
 
-The next few tasks will be creating UI elements using imported images to build a menu that allows the player to choose a level.
+### 1. Click
 
-Download the Google font “Changa” and place in a Changa folder into a new folder called Fonts in the Assets folder (the final path should be Assets/Fonts/Changa/<.ttf files>). All text should use this font, so change TimerText‘s font as well.
+In the MainMenu scene, make button-click.ogg a child object of MenuSFX.
 
-Please note you will use TextMeshPro for the text elements in this project. As TextMeshPro Text components use Font Assets you will have to create a Font Asset for each Changa-{Style}.tff file. These should be included under Assets/Fonts/Changa/ and be named according to this format Changa-{Style}.asset. For example: Changa-Regular.asset or Changa-ExtraBold.asset.
+Add the button-click sound clip to all menu buttons (all three level select buttons, Options, Exit) so that when the player’s mouse clicks on a button, it plays the sound clip.
 
-Download these images into a folder called UI in the Textures folder. Set their Texture Type to Sprite (2D and UI).
+Save MenuSFX as a prefab inside the Prefabs folder.
 
-Create a new Scene called MainMenu.
-
-Using this image as a guide, create a new Canvas with the following attributes and child objects:
-
-- Canvas Name: MenuCanvas
-  - Render mode: Screen Space - Overlay
-  - Pixel Perfect: No
-  - UI Scale Mode: Scale With Screen Size
-  - Reference Resolution: X: 1280 Y: 800
-  - Screen Match Mode: Match Width or Height
-  - Match: 1 (Height)
-  - Reference Pixels Per Unit: 100
-
-
-- Image GameObject Name: MenuBG
-  - Image: bg-menu.png
-  - Anchors Min: X: 0 Y: 0
-  - Anchors Max: X: 1 Y: 1
-  - Left: 50
-  - Top: 50
-  - Right: 50
-  - Bottom: 50
-
-
-- Image GameObject Name: Title
-  - Source image: bg-header.png
-  - Child Text GameObject Name: TitleText
-    - Text: LEVEL SELECT
-    - Font: Changa-ExtraBold.ttf
-    - Vertex Color: #ffffff
-    - Font size: 60
-    - Alignment: Center + Middle
-    - Overflow: Overflow
-
-- Level Buttons - You will need to use the Sprite Editor to slice these images. When the mouse is over the button, the button should highlight; when mouse clicks, the button should appear pressed.
-  - Button GameObject Name: Level01
-    - Background image: button-level01.png
-  - Button GameObject Name: Level02
-    - Background image: button-level02.png
-  - Button GameObject Name: Level03
-    - Background image: button-level03.png
-
-- Other Buttons - You will need to use the Sprite Editor to slice these images. When mouse is over the button, the button should highlight; when mouse clicks, the button should appear pressed.
-  - Button GameObject Name: OptionsButton
-    - Width: 200
-    - Height: 70
-    - Background image: bg-button.png
-  Text GameObject: OptionsText
-    - Text: Options
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Alignment: Center + Middle
-    - Overflow: Overflow
-    - Transition: Sprite Swap
-    - Highlighted Sprite: bg-button_1
-    - Pressed Sprite: bg-button_2
-    - Save this button into a folder called Prefabs in the Assets folder
-  - Button GameObject Name: ExitButton
-    - Width: 200
-    - Height: 70
-    - Background image: bg-button.png
-    - Text GameObject: ExitText
-    - Text: Exit
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Alignment: Center + Middle
-    - Overflow: Overflow
-    - Transition: Sprite Swap
-    - Highlighted Sprite: bg-button_1
-    - Pressed Sprite: bg-button_2
-    - Save this button into a folder called Prefabs in the Assets folder
+The OptionsButton and ExitButton prefabs should be updated with the sound effect clips
 
 ### 2. Pole position
 
-Create a new Scene called Options.
-
-- Canvas Name: OptionsCanvas
-  - Render mode: Screen Space - Overlay
-  - Pixel Perfect: No
-  - UI Scale Mode: Scale With Screen Size
-  - Reference Resolution: X: 1280 Y: 800
-  - Screen Match Mode: Match Width or Height
-  - Match: 1 (Height)
-
-- Image GameObject Name: MenuBG
-  - Image: bg-menu.png
-  - Anchors Min: X: 0 Y: 0
-  - Anchors Max: X: 1 Y: 1
-  - Left: 50
-  - Top: 50
-  - Right: 50
-  - Bottom: 50
-
-- Image GameObject Name: Title
-  - Source image: bg-header.png
-  - Child Text GameObject Name: TitleText
-    - Text: OPTIONS
-    - Font: Changa-ExtraBold.ttf
-    - Vertex Color: #ffffff
-    - Font size: 60
-    - Alignment: Center + Middle
-    - Overflow: Overflow
-
-- Slider GameObject Name: BGMSlider
-  - Child Text GameObject Name: BGMText
-  - Text: BGM
-  - Font: Changa-Medium.ttf
-  - Vertex Color: #ffffff
-  - Font size: 36
-  - Handle image: slider-handle.png
-  - Image Name: Mute
-  - Image Source: sound-mute.png
-  - Image Name: Full
-  - Image Source: sound-full.png
-
-- Slider GameObject Name: SFXSlider
-  - Text GameObject Name: SFXText
-  - Text: SFX
-  - Font: Changa-Medium.ttf
-  - Vertex Color: #ffffff
-  - Font size: 36
-  - Handle image: slider-handle.png
-  - Image Name: Mute
-  - Image Source: sound-mute.png
-  - Image Name: Full
-  - Image Source: sound-full.png
-
-
-- Toggle GameObject Name: InvertYToggle
-  - Child Text GameObject Name: InvertYToggleText
-  - Text: Invert Y-Axis
-  - Font: Changa-Medium.ttf
-  - Vertex Color: #ffffff
-  - Font size: 36
-  - Background image: bg-toggle.png
-  - Checkmark: check-toggle.png
-
-- Buttons
-  - Button GameObject Name: BackButton
-    - Background image: bg-button.png
-    - Child Text GameObject Name: BackText
-    - Text: Back
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Save this button into a folder called Prefabs in the Assets folder
-  - Button GameObject Name: ApplyButton
-    - Background image: bg-button.png
-    - Child Text GameObject Name: ApplyText
-    - Text: Apply
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Save this button into a folder called Prefabs in the Assets folder
-
-### 3. Pushing buttons
-
-Create a new C# script called MainMenu.cs. In the MainMenu scene, script the level buttons scene so that choosing Level01, Level02, or Level03 loads the corresponding scene.
-
-- Class Name: public class MainMenu : MonoBehaviour
-- Prototype: public void LevelSelect(int level)
-
-Then script OptionsButton so that clicking on it loads the Options scene and script the ExitButton so that when it is clicked, the game is closed and Exited is printed to the console.
-
-- Class Name: public class MainMenu : MonoBehaviour
-- Prototype: public void Options()
-
-Create a new C# script called OptionsMenu.cs In the Options scene, script BackButton so that it loads the previous scene (which will not necessarily always be the MainMenu scene, as later we’ll implement the ability to access the Options menu during gameplay).
-
-- Class Name: public class OptionsMenu : MonoBehaviour
-- Prototype: public void Back()
-
-### 4. Wait, hold on, time out
-
-Inside the Level01 Scene, create a new Canvas and using the image as a guide, create a pause screen with the following objects:
-
-- Canvas Name: PauseCanvas
-  - Render mode: Screen Space - Overlay
-  - Pixel Perfect: No
-  - UI Scale Mode: Scale With Screen Size
-  - Reference Resolution: X: 1280 Y: 800
-  - Screen Match Mode: Match Width or Height
-  - Match: 1 (Height)
+In the MainMenu scene, add Wallpaper as background music. It should start playing when the scene loads and stop when the player loads a different scene. The music should also loop.
 
-- Image GameObject Name: MenuBG
-  - Image: bg-menu.png
-  - Left: 50
-  - Top: 50
-  - Right: 50
-  - Bottom: 50
+Inside the Audio folder, create an AudioMixer named MasterMixer. Inside MasterMixer, create a new Audio Mixer Group called BGM. Set the music’s Audio Mixer Group to BGM. By default, BGM audio levels should be at 0.00dB.
 
-- Image GameObject Name Title
-  - Background image: bg-header.png
-  - Child Text GameObject Name: TitleText
-  - Text: PAUSED
-  - Font: Changa-ExtraBold.ttf
-  - Vertex Color: #ffffff
-  - Font size: 60
-  - Alignment: Center + Middle
-  - Overflow: Overflow
+### 3. Tap-tap-tap
 
-- Buttons
-  - Button GameObject Name: RestartButton
-    - Child Text GameObject Name: RestartText
-    - Text: Restart
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Background image: bg-button.png
-  - Button GameObject Name: MenuButton
-    - Child Text GameObject Name: MenuText
-    - Text: Menu
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Background image: bg-button.png
-  - OptionsButton prefab
-  - Button GameObject Name: ResumeButton
-    - Child Text GameObject Name: ResumeText
-    - Text: Resume
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Background image: bg-button.png
-  
-Set the PauseCanvas as inactive by un-checking the box at the top of the Inspector and save it as a Prefab.
-
-
-### 5. Es-ca-pé
-
-Create a new C# script called PauseMenu.cs. Add a method to this script so that when the player presses Esc while playing the game, the game should pause and the PauseCanvas should become active. The timer should also pause.
-
-Class: public class PauseMenu : MonoBehaviour
-Prototype: public void Pause()
-
-Add another method so that If the player presses Esc while in the PauseMenu or presses the Resume button, the game should unpause where the player left off and the timer should continue from where it stopped.
-
-Class: public class PauseMenu : MonoBehaviour
-Prototype: public void Resume()
-
-Make sure to save the changes to the PauseMenu Prefab by pressing the Apply button at the top of the Inspector.
-
-### 6. Even more button pushing
-
-In the PauseMenu and PauseMenu.cs, script the RestartButton so that it reloads the level scene that the player is currently on.
-
-- Class: public class PauseMenu : MonoBehaviour
-- Prototype: public void Restart()
-
-Script the MenuButton so that it loads the MainMenu scene.
-
-- Class: public class PauseMenu : MonoBehaviour
-- Prototype: public void MainMenu()
-
-Script the OptionsButton so that it loads the Options scene.
-
-- Class: public class PauseMenu : MonoBehaviour
-- Prototype: public void Options()
-- 
-Apply the changes to the PauseMenu Prefab then add it to the Level02 and Level03 scenes.
-
-### 7. Up is down, down is up
+In the Level01 scene, add footstep sound clips to the Player so that when the Player is running, the sound plays in a loop until the Player stops running.
 
-In the CameraController.cs script, add the ability to invert the Y axis.
-
-Create a public bool called isInverted.
+- When the Player runs on a grassy platform, footsteps_running_grass should play
+- When the Player runs on a stone platform, footsteps_running_rock should play
+- If you’ve used both types of platforms in your levels, find a way to trigger different sounds on different surfaces.
+- The footstep sounds should line up with the animation of the Player’s feet touching the ground
+- The footstep sounds should not play while the Player is jumping or falling
 
-The camera should be able to work in two ways:
+Create a new Audio Mixer Group named Running in MasterMixer and set the footsteps sound clips’ Audio Mixer Group to Running. By default this group’s audio level should be -20.00dB. Add filters to the group to make the sound fit the movement / terrain better.
 
-- Normal: The camera should move up when the mouse moves up and down when the mouse moves down.
-- Inverted: The camera should move up when the mouse moves down and down when the mouse moves up.
+### 4. Thump
 
-Test it by checking isInverted on and off in the Inspector as you play the game.
+In the Level01 scene, add a landing sound clip to play when the player hits the ground from falling off the platforms and restarting. If the player lands on a grassy platform, footsteps_landing_grass should play. If the player lands on a stone platform, footsteps_landing_rock should play.
 
-### 8. But Y?
+Create a new Audio Mixer Group named Landing in MasterMixer and set the sound clip’s Audio Mixer Group to Landing. By default this group’s audio level should be 2.00dB. Add filters to the group to make the fall sound more substantial.
 
-In Options and OptionsMenu.cs, script it so that checking the InvertYToggle in the menu and applying the changes reverses the camera/mouse movements in the level scene.
 
-Clicking Apply should save any changes and return to the scene the player was previously on, whether it was the MainMenu or a level.
+### 5. Cheery Monday
 
-- Class Name: public class OptionsMenu : MonoBehaviour
-- Prototype: public void Apply()
+In the Level01 scene, add CheeryMonday as background music. It should start playing when the level loads and stop when the player touches the WinFlag or returns to the MainMenu scene. The player sound effects should still play while the BGM plays and it should loop.
 
-Clicking Back should not save any changes return to the scene the player was previously on, whether it was the MainMenu or a level.
+Set the music’s Audio Mixer Group to BGM.
 
-- Class Name: public class OptionsMenu : MonoBehaviour
-- Prototype: public void Back()
+### 6. Victory fanfare
 
-The state of Invert Y-Axis should be persistent even if the player chooses a new level or navigates through different menus.
+In the Level01 scene, add VictoryPiano as a win sting that plays once when the Player touches the WinFlag. The background music CheeryMonday should stop playing when VictoryPiano starts.
 
-### 9. A winner is you
+Set the Win music’s Audio Mixer Group to BGM.
 
-In the Level01 Scene, create a new Canvas and using the image as a guide, create a win screen with the following objects:
+### 7. Ambience
 
-- Canvas Name: WinCanvas
-  - Render mode: Screen Space - Overlay
-  - Pixel Perfect: No
-  - UI Scale Mode: Scale With Screen Size
-  - Reference Resolution: X: 1280 Y: 800
-  - Screen Match Mode: Match Width or Height
-  - Match: 1 (Height)
+Add ambient audio to at least one tree (birds) or at least one rock/grass/flower (crickets). This audio should be quiet or muted from a distance and grow louder as the player gets closer to the GameObject.
 
-- Image GameObject Name: MenuBG
-  - Image: bg-menu.png
-  - Left: 50
-  - Top: 50
-  - Right: 50
-  - Bottom: 50
+Create a new Audio Mixer Group named Ambience in MasterMixer and set birds and crickets Audio Mixer Group to Ambience. By default, Ambience‘s audio level should be 5.00dB.
 
-- Image GameObject Name: Title
-  Background image: bg-header.png
-  Child Text GameObject Name: TitleText
-    - Text: YOU WIN!
-    - Font: Changa-ExtraBold.ttf
-    - Vertex Color: #ffffff
-    - Font size: 60
-    - Alignment: Center + Middle
-    - Overflow: Overflow
+### 8. Shhh
 
-- Buttons
-  - Button GameObject Name: MenuButton - Child Text GameObject Name: MenuText
-    - Text: Menu
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Background image: bg-button.png
-  - Button GameObject Name: NextButton - Child Text GameObject Name: NextText
-    - Text: Next
-    - Font: Changa-Medium.ttf
-    - Vertex Color: #ffffff
-    - Font size: 36
-    - Background image: bg-button.png
-  
-- Text GameObject Name: FinalTime
-  - Text: 0:00.00
-  - Font: Changa-Medium.ttf
-  - Vertex Color: #ffffff
-  - Font size: 100
-  - Add a Shadow Component
-  - Effect Color: #000000
-  - Effect Distance: X: 4, Y: -4
+Using Snapshots, create functionality so that when the Player pauses the game, the BGM should become muffled. (Check the playable demo to hear the desired effect.) When the player returns to the game, the sound should return to its original settings.
 
-Set the WinCanvas as inactive by un-checking the box at the top of the Inspector and save it as a Prefab.
+### 9. Volume control #0
 
-### 10. Winning isn't everything
+In the Options scene, make sure the OptionsButton and ExitButton prefabs are updated to have the button-rollover and button-click sound effect events applied.
 
-Edit WinTrigger.cs so that when the player touches the flag, WinCanvas becomes active.
+In OptionsMenu.cs, script the BGMSlider so that when the slider’s value is changed by dragging the slider handle, the BGM audio decreases and increases from fully muted to max volume. These values should persist through all levels and when the game is quit and re-opened.
 
-Add a method to Timer.cs so that when the player touches the flag, the player’s finish time is displayed in FinalTime in WinCanvas.
+Hint: Converting dB to float
 
-- Class Name: public class Timer : MonoBehaviour
-- Prototype: public void Win()
+### 10. Volume control #1
 
-Create a new C# script called WinMenu.cs.
+In the Options scene and OptionsMenu.cs, script the SFXSlider so that when the slider’s value is changed by dragging the slider handle, the SFX audio decreases and increases from fully muted to max volume. These values should persist through all levels and when the game is quit and re-opened. SFX audio includes the ambient sounds and UI button sounds.
 
-Script the MenuButton so that it takes the player to the MainMenu Scene.
+Hint: Converting dB to float
 
-- Class Name: public class WinMenu : MonoBehaviour
-- Prototype: public void MainMenu()
+### 11. Sound system gonna bring me back up
 
-Script the NextButton so that it loads the next level. If they are currently on the last level, load the MainMenu instead.
+Add music and sound effects to scenes Level02 and Level03, using the same Audio Mixer you created for Level01. Make sure your player sounds, options, etc. work in these scenes as well.
 
-- Class Name: public class WinMenu : MonoBehaviour
-- Prototype: public void Next()
+- Level02 BGM: PorchSwingDays
+- Level03 BGM: BrittleRille
 
-### 11. Still under development
+### 12. We're done!
 
 Scenes in Build:
 
