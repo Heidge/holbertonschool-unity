@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,8 +22,8 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-
-        if (transform.position.y <= -10.0f)
+        
+		if (transform.position.y <= -10.0f)
         {
             transform.position = new Vector3(0.0f, 1.25f, 0.0f);
         }
@@ -45,13 +46,17 @@ public class PlayerController : MonoBehaviour
             }
             
             direction.y += gravity * Time.deltaTime;
-
             animator.SetBool("IsRunning", hInput != 0 || vInput != 0);
+            if (animator.GetBool("IsRunning") && controller.isGrounded)
+            {
+				this.GetComponent<AudioSource>().enabled = true;
+                Debug.Log(animator.GetBool("IsRunning"));
+			}
+            else
+            {
+				this.GetComponent<AudioSource>().enabled = false;
+			}
             controller.Move(direction * speed * Time.deltaTime);
-            
-
-
-
         }
     }
 }

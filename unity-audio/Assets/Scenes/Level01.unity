@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeE (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd59f32fe5a39274681b122a7ceb09c1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -396,6 +400,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
       propertyPath: m_Name
       value: rock_smallFlatA (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -542,6 +550,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc833f392f3faf4b9bdd47f0399d077, type: 3}
       propertyPath: m_Name
       value: fence_simple (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc833f392f3faf4b9bdd47f0399d077, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -715,6 +727,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
       propertyPath: m_Name
       value: rock_smallG (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -972,6 +988,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc833f392f3faf4b9bdd47f0399d077, type: 3}
       propertyPath: m_Name
       value: fence_simple
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc833f392f3faf4b9bdd47f0399d077, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1469,6 +1489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_tallA
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aef18d52fdcbfed4386c9a333506076d, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1787,6 +1811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeA (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fdab73bfd46da3f4d9da52ca9a556e4c, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2044,6 +2072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd59f32fe5a39274681b122a7ceb09c1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2147,6 +2179,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
       propertyPath: m_Name
       value: grass (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2381,6 +2417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_tallF
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa07c0a7a3dfd9a4b9002ebd6fe71b6f, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2455,6 +2495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2528,6 +2572,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 454d3185520956844bd3b39def9a04a4, type: 3}
       propertyPath: m_Name
       value: rock_smallFlatB
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 454d3185520956844bd3b39def9a04a4, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2781,6 +2829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeB
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db29a951e5467734fa84aaef66a73932, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2922,6 +2974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallFlatA
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3031,6 +3087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallH (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c88974a134366e44cb2a9bb790481a09, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3134,6 +3194,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 13d3a54a22a0f534da286ad859b17c25, type: 3}
       propertyPath: m_Name
       value: rock_largeC (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13d3a54a22a0f534da286ad859b17c25, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3477,6 +3541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cliff_blockSlope_rock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ac3f4c9efadf5241b21933300efe817, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3800,6 +3868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bridge_side_woodRound
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b461055ecbe53034d8a8180c7c72b024, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3978,6 +4050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeD
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 606d0433f6d381343aabf261711a1e17, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4049,6 +4125,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
       propertyPath: m_Name
       value: end_platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4363,6 +4443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeB (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db29a951e5467734fa84aaef66a73932, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4504,6 +4588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cliff_steps_rock (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67a17a0c444ce3f4e8494a758cd37ada, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4607,6 +4695,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 28da206a8140db64a863248cf49258b3, type: 3}
       propertyPath: m_Name
       value: tree_detailed
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 28da206a8140db64a863248cf49258b3, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4899,6 +4991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: log_large
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fe2c9e69a92598241a961d5a5b4f1439, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5134,6 +5230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallB
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb71853216e49f746b1cd48132439d22, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5344,6 +5444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_tallB
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 05ef3f030da36cb428e808a1622c937a, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5415,6 +5519,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
       propertyPath: m_Name
       value: grass (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5590,6 +5698,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fdab73bfd46da3f4d9da52ca9a556e4c, type: 3}
       propertyPath: m_Name
       value: rock_largeA
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fdab73bfd46da3f4d9da52ca9a556e4c, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5883,6 +5995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallTopB
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a41a4d6b6bfe1f94aaeac632844dc741, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6024,6 +6140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallFlatC
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 77f26d584996b934a9cb0148ab972044, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6142,6 +6262,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
       propertyPath: m_Name
       value: rock_smallFlatA (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6395,6 +6519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6533,6 +6661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cliff_steps_rock (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67a17a0c444ce3f4e8494a758cd37ada, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6636,6 +6768,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
       propertyPath: m_Name
       value: rock_smallG (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6741,6 +6877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallH (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c88974a134366e44cb2a9bb790481a09, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6844,6 +6984,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fdab73bfd46da3f4d9da52ca9a556e4c, type: 3}
       propertyPath: m_Name
       value: rock_largeA (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fdab73bfd46da3f4d9da52ca9a556e4c, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7166,6 +7310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: start_platform
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4222ebc9c02fb6646be93e4d3f690381, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7237,6 +7385,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
       propertyPath: m_Name
       value: rock_smallG (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7416,6 +7568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13d3a54a22a0f534da286ad859b17c25, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7519,6 +7675,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c88974a134366e44cb2a9bb790481a09, type: 3}
       propertyPath: m_Name
       value: rock_smallH (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c88974a134366e44cb2a9bb790481a09, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7845,6 +8005,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c88974a134366e44cb2a9bb790481a09, type: 3}
       propertyPath: m_Name
       value: rock_smallH (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c88974a134366e44cb2a9bb790481a09, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8399,6 +8563,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610370315}
   m_CullTransparentMesh: 1
+--- !u!1 &1616337714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1616337716}
+  - component: {fileID: 1616337715}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1616337715
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616337714}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 7528176289278123239, guid: 72568eab0e6f4f742bb4d588af2f5b5f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 573a552b98478724d85d81adfdf6d054, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1616337716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616337714}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.18323779, y: 0.18415642, z: -0.1606729}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1622489084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 340ae28d131686142b95267e37e7ce73, type: 3}
@@ -8546,6 +8838,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
       propertyPath: m_Name
       value: grass (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8787,6 +9083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallG (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8977,6 +9277,7 @@ MonoBehaviour:
   Timer_Text: {fileID: 1610370317}
   WinCanvas: {fileID: 3524521090064802416}
   TimerCanvas: {fileID: 1700961346}
+  BackgroundMusic: {fileID: 1616337715}
 --- !u!23 &1776064601
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9103,6 +9404,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
       propertyPath: m_Name
       value: rock_smallG (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9351,6 +9656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: log_stack
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aedd80353146e3247a07ec2bdb15ec69, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9380,6 +9689,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea1431eb73be7442a3688b7e3ae47c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1831248162
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831248134}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4072867460858794664, guid: 72568eab0e6f4f742bb4d588af2f5b5f, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 8e49cfdb18de3bf4c990a8885b486173, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1834293884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9687,6 +10092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_smallH
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c88974a134366e44cb2a9bb790481a09, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9790,6 +10199,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cd59f32fe5a39274681b122a7ceb09c1, type: 3}
       propertyPath: m_Name
       value: rock_largeE
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd59f32fe5a39274681b122a7ceb09c1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9931,6 +10344,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
       propertyPath: m_Name
       value: grass (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0856f9385f1a95746a2fde63324b30bd, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10089,6 +10506,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 13d3a54a22a0f534da286ad859b17c25, type: 3}
       propertyPath: m_Name
       value: rock_largeC
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13d3a54a22a0f534da286ad859b17c25, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10304,6 +10725,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
       propertyPath: m_Name
       value: rock_smallG
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 16ba899c03378f74ca9cdcb5e0fceda1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10752,6 +11177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock_largeE (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd59f32fe5a39274681b122a7ceb09c1, type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10823,6 +11252,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfc833f392f3faf4b9bdd47f0399d077, type: 3}
       propertyPath: m_Name
       value: fence_simple (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfc833f392f3faf4b9bdd47f0399d077, type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11203,7 +11636,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1254411706894460364, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1831248162}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd542decfa93cd4ea42b39fd8e913e4, type: 3}
 --- !u!1001 &7259413474502853791
 PrefabInstance:
@@ -11370,3 +11806,4 @@ SceneRoots:
   - {fileID: 89516941679803331}
   - {fileID: 7259413474502853791}
   - {fileID: 2068819659}
+  - {fileID: 1616337716}

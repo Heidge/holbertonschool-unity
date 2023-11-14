@@ -10,8 +10,7 @@ public class WinTrigger : MonoBehaviour
     public Text Timer_Text;
     public GameObject WinCanvas;
     public GameObject TimerCanvas;
-
-
+    public AudioSource BackgroundMusic;
 
     void OnTriggerEnter(Collider other)
     {
@@ -21,6 +20,7 @@ public class WinTrigger : MonoBehaviour
             TimerCanvas.SetActive(false);
             WinCanvas.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            BackgroundMusic.enabled = false;
         }
     }
 }
