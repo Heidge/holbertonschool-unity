@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public GameObject childcontroller;
     private Animator animator;
+    public GameObject tree;
 
     void Start()
     {
@@ -58,5 +59,5 @@ public class PlayerController : MonoBehaviour
 			}
             controller.Move(direction * speed * Time.deltaTime);
         }
-    }
+	}
 }

@@ -21,6 +21,7 @@ public class WinTrigger : MonoBehaviour
             WinCanvas.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             BackgroundMusic.enabled = false;
+            this.GetComponent<AudioSource>().enabled = true;    
         }
     }
 }

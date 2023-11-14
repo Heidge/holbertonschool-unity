@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,8 +12,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseCanvas;
     public GameObject Player;
     private bool pauseActived = false;
+    public AudioMixerSnapshot paused;
+	public AudioMixerSnapshot unpaused;
 
-    void Start()
+	void Start()
     {
 
     }
@@ -34,16 +37,18 @@ public class PauseMenu : MonoBehaviour
     }
     public void Pause()
     {
-        Time.timeScale = 0f;
-        pauseActived = true;
+		paused.TransitionTo(0.000001f);
+		Time.timeScale = 0f;
+		pauseActived = true;
         pauseCanvas.SetActive(true);
     }
 
     public void Resume()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+		unpaused.TransitionTo(0.000001f);
+		Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
-        pauseActived = false;
+		pauseActived = false;
         pauseCanvas.SetActive(false);
     }
 
