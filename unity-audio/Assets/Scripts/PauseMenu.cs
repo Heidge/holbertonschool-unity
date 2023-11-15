@@ -15,11 +15,6 @@ public class PauseMenu : MonoBehaviour
     public AudioMixerSnapshot paused;
 	public AudioMixerSnapshot unpaused;
 
-	void Start()
-    {
-
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -54,7 +49,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1f;
+		unpaused.TransitionTo(0.000001f);
+		Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
